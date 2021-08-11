@@ -33,10 +33,7 @@ export default function App() {
   }
 
   function clickEventHandler(event) {
-    // var emojiSelected = event;
-
     // var emojiSelected = emojiArray[event];
-
     var emojiMeaning = emojiDictionary[event];
     // console.log(emojiMeaning);
     setMeaning(emojiMeaning);
@@ -45,7 +42,7 @@ export default function App() {
   return (
     <div className="App">
       <h1>{headline}</h1>
-      {/* <h2>Start editing to see some magic happen!</h2> */}
+
       <div>
         <input
           className="input"
