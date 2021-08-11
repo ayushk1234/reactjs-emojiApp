@@ -4,7 +4,7 @@ import React, { useState } from "react";
 var headline = " Emoji Translate";
 
 var emojiDictionary = {
-  "😀": "simling",
+  "😀": "smiling",
   "😥": "sad",
   "😠": "angry"
 };
