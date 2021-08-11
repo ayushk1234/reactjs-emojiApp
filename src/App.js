@@ -12,9 +12,9 @@ var emojiDictionary = {
 var emojiArray = Object.keys(emojiDictionary);
 
 var noEmoji = "this emoji is not in our database, Sorry!";
-
+var inputMsg = "insert emoji here";
 export default function App() {
-  const [meaning, setMeaning] = useState("");
+  const [meaning, setMeaning] = useState("The Emoji meaning will appear  here");
 
   function changeEventHandler(event) {
     //setCliclCounter(clickCounter + 1);
@@ -35,13 +35,9 @@ export default function App() {
   function clickEventHandler(event) {
     // var emojiSelected = event;
 
-    var emojiSelected = emojiArray[event];
+    // var emojiSelected = emojiArray[event];
 
-    var emojiMeaning = emojiDictionary[emojiSelected];
-    // console.log(emojiMeaning);
-
-    // console.log(emojiSelected);
-    // console.log(event.target.value);
+    var emojiMeaning = emojiDictionary[event];
     // console.log(emojiMeaning);
     setMeaning(emojiMeaning);
   }
@@ -51,7 +47,11 @@ export default function App() {
       <h1>{headline}</h1>
       {/* <h2>Start editing to see some magic happen!</h2> */}
       <div>
-        <input className="input" onChange={changeEventHandler}></input>
+        <input
+          className="input"
+          onChange={changeEventHandler}
+          placeholder={inputMsg}
+        ></input>
       </div>
       <div>
         <h2 className="output">{meaning}</h2>
@@ -63,7 +63,7 @@ export default function App() {
               <li
                 key={item}
                 className="list"
-                onClick={() => clickEventHandler(index)}
+                onClick={() => clickEventHandler(item)}
               >
                 {item}
               </li>
