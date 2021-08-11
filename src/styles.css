@@ -1,0 +1,24 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.input {
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.output {
+  padding: 1rem;
+}
+
+.emojiSpread {
+  /* width-max: 150px; */
+}
+.list {
+  cursor: pointer;
+  font-size: 2rem;
+  margin-right: 1rem;
+  list-style: none;
+  display: inline;
+}
